@@ -538,22 +538,68 @@ background-repeat: no-repeat;
     /* animation: anim-2 10s linear infinite 0.5s; */
   }
 
-  @keyframes anim-1 {
-    0%   { transform: translate(-70px, 50px); z-index: 1; }
-    100%  { transform: translate(30px, -50px); z-index: 3; }
-    /* 100%  { transform: translate(100px, 120px); z-index: 3; } */
-   
+  @keyframes galanim {
+from{
+      z-index: 1;
+      box-shadow:black 0px 0px 0px;
+      transform: scale(1);
+     }
+    to{
+      z-index: 3;
+      transform: matrix(1, 0, 0, 1, 50, 100);
+
+     }
+  }
+  @keyframes galanim-3 {
+    from{
+          z-index: 3;
+          box-shadow:black 0px 0px 0px;
+          transform: scale(1);
+         }
+        to{
+          z-index: 1;
+          transform: matrix(1, 0, 0, 1, 50, 100);
+    
+         }
+      }
+  .add-gal-anim{
+      animation: galanim 5s;
+  }
+  .add-gal-anim-slow {
+    animation: galanim 3s ease-in;
+  }
+  #accordation{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .acc-con{
+    width: 100%;
+    height: 60vh;
+    display: inline-flex;
+    background-color: #c998e6;
+  }
+  .acc-con>div:nth-child(odd) {
+    width:20%;
+    height: 60vh;
+    background-color: #322c5e;
   }
   
-  @keyframes anim-2 {
-    0%   { transform: translate(30px, -50px); z-index: 2; }
-    50%  { transform: translate(100px, 120px); z-index: 3; }
-    100% { transform: translate(30px, -50px); z-index: 2; }
+  .acc-con>div:nth-child(even) {
+    width: 20%;
+    height: 60vh;
+    background-color: #b4da0f;
   }
-  
-  @keyframes anim-3 {
-    0%   { transform: translate(100px, 120px); z-index: 3; }
-    50%  { transform: translate(-70px, 50px); z-index: 1; }
-    100% { transform: translate(100px, 120px); z-index: 3; }
+  @keyframes accordation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
-  
+  .acc-im-1:hover{
+      animation:  accordation  .7s ease;
+  }
