@@ -65,7 +65,8 @@ $(document).ready(function () {
     $('.img-ga:nth-child(1)').hover(function () {
         // over
         $(this).css({
-        'z-index':'3'
+        'z-index':'3',
+        'box-shadow':'black 3px 3px 5px'
         },1000,'ease');
         $('.img-ga:nth-child(2)').css(
           'z-index','2'
@@ -74,12 +75,18 @@ $(document).ready(function () {
           'z-index','1'
         );
       },
+      function(){
+        $(this).css({
+          'box-shadow':'none'
+        })
+      }
       
     );
     $('.img-ga:nth-child(2)').hover(function () {
       // over
       $(this).css({
-      'z-index':'3'
+      'z-index':'3',
+      'box-shadow':'black 3px 3px 5px'
       },1000,'ease');
       $('.img-ga:nth-child(1)').css(
         'z-index','2'
@@ -88,12 +95,19 @@ $(document).ready(function () {
         'z-index','1'
       );
     },
+    function (){
+      $(this).css({
+        'box-shadow':'none'
+      })
+    }
     
   );
   $('.img-ga:nth-child(3)').hover(function () {
     // over
     $(this).css({
-    'z-index':'3'
+    'z-index':'3',
+    'box-shadow':'black 3px 3px 5px'
+
     },1000,'ease');
     $('.img-ga:nth-child(2)').css(
       'z-index','2'
@@ -102,7 +116,11 @@ $(document).ready(function () {
       'z-index','1'
     );
   },
-  
+  function(){
+    $(this).css({
+      'box-shadow':'none'
+    })
+  }
 );
 
     
