@@ -62,73 +62,29 @@ $(document).ready(function () {
         
       }
     );
-//     $('.img-ga:nth-child(1)').hover(function () {
-//         // over
-//         $(this).css({
-//         'z-index':'3',
-//         'box-shadow':'black 3px 3px 5px'
-//         },1000,'ease');
-//         $('.img-ga:nth-child(2)').css(
-//           'z-index','2'
-//         );
-//         $('.img-ga:nth-child(3)').css(
-//           'z-index','1'
-//         );
-//       },
-//       function(){
-//         $(this).css({
-//           'box-shadow':'none'
-//         })
-//       }
-      
-//     );
-//     $('.img-ga:nth-child(2)').hover(function () {
-//       // over
-//       $(this).css({
-//       'z-index':'3',
-//       'box-shadow':'black 3px 3px 5px'
-//       },1000,'ease');
-//       $('.img-ga:nth-child(1)').css(
-//         'z-index','2'
-//       );
-//       $('.img-ga:nth-child(3)').css(
-//         'z-index','1'
-//       );
-//     },
-//     function (){
-//       $(this).css({
-//         'box-shadow':'none'
-//       })
-//     }
-    
-//   );
-//   $('.img-ga:nth-child(3)').hover(function () {
-//     // over
-//     $(this).css({
-//     'z-index':'3',
-//     'box-shadow':'black 3px 3px 5px'
 
-//     },1000,'ease');
-//     $('.img-ga:nth-child(2)').css(
-//       'z-index','2'
-//     );
-//     $('.img-ga:nth-child(1)').css(
-//       'z-index','1'
-//     );
-//   },
-//   function(){
-//     $(this).css({
-//       'box-shadow':'none'
-//     })
-//   }
-// );
-$('.img-ga:nth-child(1)').hover(function () {
-    // over
-       $(this).css('box-shadow','black 3px 3px 5px');
-    $(this).addClass('add-gal-anim-slow');
-  }, function () {
+    var $img = $('.img-ga');
+    $($img).hover(function () {
+        // over
+        $(this).css('z-index','3');
+      }, function () {
+        // out
+        $(this).css('z-index','1');
+
+      }
+    );
+    var acc_img = $('.acc-im');
+    $(acc_img).hover(
+      function () {
+        // mouse enter
+        $(this).removeClass('acc-img').addClass('add-acc');
+        $(acc_img).not(this).removeClass('acc-img acc-img-c');
+      },
+      function () {
+        // mouse leave
+        $(this).removeClass('add-acc').addClass('acc-img');
+      }
+    );
     
-  }
-);
     
 });
